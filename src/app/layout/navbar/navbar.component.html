@@ -1,0 +1,17 @@
+<nav class="navbar fixed-top navbar-expand-sm navbar- " style="background-color: rosybrown">
+    <a class="navbar-brand" href="#" style=" font-size: xx-large; color: darkblue">
+        <img src="./../../../assets/car-wheel.svg" width="43" height="43" alt="">
+        Usługi wulkanizacyjne
+    </a>
+    <form *ngIf="userRoles?.includes('admin')" class="form-inline" style="text-align: center;">
+        <button class="btn btn-outline-dark" type="button" (click)="onAddService()">Dodaj usługę</button>
+    </form>
+
+    <div class="collapse navbar-collapse" id="navbarText">
+        <button *ngIf="isLoggedIn" class="btn btn-outline-danger" type="button" (click)="logout()">Wyloguj</button>
+        <button *ngIf="!isLoggedIn" class="btn btn-outline-success" type="button" (click)="login()">Zaloguj</button>
+        <span class="navbar-text ml-auto">
+            {{ currentTime }}
+        </span>
+    </div>
+</nav>

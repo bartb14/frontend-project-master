@@ -1,0 +1,7 @@
+  <app-navbar (addService)="onAdd()"></app-navbar>
+  <app-add-or-edit-dialog #addOrEditDialog></app-add-or-edit-dialog>
+  <app-confirmation-dialog #confirmationDialog></app-confirmation-dialog>
+  <app-term-dialog #termDialog></app-term-dialog>
+  <div class="container-fluid" style="height: 100%; padding-top: 60px; padding-bottom: 20px; overflow-x: hidden;">
+      <app-data-list (deleteClicked)="onDelete($event)" (editClicked)="onEdit($event)" (orderClicked)="onOrder($event)" (showTermsClicked)="onShowTerms($event)"></app-data-list>
+  </div>

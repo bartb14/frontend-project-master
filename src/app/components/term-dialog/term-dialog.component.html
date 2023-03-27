@@ -1,0 +1,20 @@
+<div class="modal fade" id="term-dialog" tabindex="-1" aria-labelledby="term-dialog-label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="term-dialog-label">{{ config?.title }}</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <div *ngFor="let term of terms">
+                <span>{{ 'Zamówione przez ' + term.clientName + ' na ' + getFormattedDate(term.dateOfExecution) }}</span>
+              </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" (click)="closeDialog()">{{config?.rejectLabel ? config.rejectLabel : 'Zamknij'}}</button>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+.edit-btn {
+    padding: 3px 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+
+    i {
+        font-size: 12px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+
+.item-price {
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .item-price {
+        left: 40px;
+    }
+}
